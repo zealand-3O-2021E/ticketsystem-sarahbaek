@@ -4,8 +4,12 @@ namespace ClassLibraryTicketSystem
 {
     public class Car : Vehicle
     {
-     
 
+        public Car(string licencePlate, DateTime date) 
+        : base(licencePlate, date)
+        {
+
+        }
         /// <summary>
         ///Method  
        /// public double Price() The price is fixed at 240 which must be returned

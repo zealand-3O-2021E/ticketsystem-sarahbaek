@@ -8,6 +8,31 @@ namespace ClassLibraryTicketSystem
 {
     public abstract class Vehicle
     {
+        public Vehicle()
+        {
+
+        }
+
+       public Vehicle(string licensePlate, DateTime date)
+        {
+            LicensePlate = licensePlate;
+            if (licensePlate.Length > 7)
+            {
+                //throw new ArgumentOutOfRangeException("The licenceplate should not be more than 7 characters.");
+                throw new System.Reflection.TargetParameterCountException("Are there 7 characters?");
+            }
+
+            Date = date;
+        }
+        public Vehicle(string licensePlate)
+        {
+            LicensePlate = licensePlate;
+            if (licensePlate.Length > 7)
+            {
+                //throw new ArgumentOutOfRangeException("The licenceplate should not be more than 7 characters.");
+                throw new System.Reflection.TargetParameterCountException("Are there 7 characters?");
+            }
+        }
         /// <summary>
         /// Properties
         /// </summary>

@@ -21,7 +21,7 @@ namespace ClassLibraryTicketSystem.Tests
             //Arrange
             double Expected = 240.00;
             //Act
-            Car car1 = new Car();
+            Car car1 = new Car("ASFDGHY", DateTime.Today);
             double Actual = car1.Price();
             //Assert
             Assert.AreEqual(Expected, Actual);
@@ -33,12 +33,15 @@ namespace ClassLibraryTicketSystem.Tests
         {
             //Arrange
             string Expected = "Car";
-            Car car1 = new Car();
+            Car car1 = new Car("ASFDGHY", DateTime.Today);
             //Act
-           string Actual =  car1.VehicleType();
+            string Actual =  car1.VehicleType();
             //Assert
             Assert.AreEqual(Expected, Actual);
             //Assert.Fail();
         }
+
+     
+
     }
 }

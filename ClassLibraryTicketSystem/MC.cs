@@ -10,7 +10,11 @@ namespace ClassLibraryTicketSystem
     {
         //public string LicencePlate { get; set; }
         //public DateTime Date { get; set; }
+        public MC(string licencePlate, DateTime date )
+        :base(licencePlate,  date)
+        {
 
+        }
 
         ///// <summary>
         ///  method 
