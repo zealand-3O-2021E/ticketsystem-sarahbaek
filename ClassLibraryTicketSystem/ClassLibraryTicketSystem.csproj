@@ -4,4 +4,8 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>C:\Users\sbaek\Source\Repos\ticketsystem-sarahbaek\ClassLibraryTicketSystem\ClassLibraryTicketSystem.xml</DocumentationFile>
+  </PropertyGroup>
+
 </Project>
