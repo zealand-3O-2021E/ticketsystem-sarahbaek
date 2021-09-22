@@ -34,7 +34,7 @@ namespace ClassLibraryTicketSystem.Tests
             MC mc1 = new MC();
 
             //Act
-          string Actual=   mc1.Vehicle();
+          string Actual=   mc1.VehicleType();
             //Asert
             Assert.AreEqual(Expected, Actual);
             //Assert.Fail();
