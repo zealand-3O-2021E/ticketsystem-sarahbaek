@@ -10,33 +10,32 @@ using System.Threading.Tasks;
 namespace ClassLibraryTicketSystem.Tests
 {
     [TestClass()]
-    public class CarTests
+    public class MCTests
     {
-        /// <summary>
-        /// Testing the Price method. It should retun a double 240.00.
-        /// </summary>
         [TestMethod()]
-        public void PriceTest_CorrectPrice_Pass()
+        public void PriceTest_MCRice_Passing()
         {
             //Arrange
-            double Expected = 240.00;
+            double Expected = 125.00;
+            MC mc1 = new MC();
+            
             //Act
-            Car car1 = new Car();
-            double Actual = car1.Price();
+           double Actuual =  mc1.Price();
             //Assert
-            Assert.AreEqual(Expected, Actual);
+            Assert.AreEqual(Expected, Actuual);
             //Assert.Fail();
         }
 
         [TestMethod()]
-        public void VehicleTypeTest()
+        public void VehicleTest()
         {
             //Arrange
-            string Expected = "Car";
-            Car car1 = new Car();
+            string Expected = "MC";
+            MC mc1 = new MC();
+
             //Act
-           string Actual =  car1.VehicleType();
-            //Assert
+          string Actual=   mc1.Vehicle();
+            //Asert
             Assert.AreEqual(Expected, Actual);
             //Assert.Fail();
         }

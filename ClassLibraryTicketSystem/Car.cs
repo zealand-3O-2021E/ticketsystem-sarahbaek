@@ -25,7 +25,7 @@ namespace ClassLibraryTicketSystem
         /// public string VehicleType() which returns the string "Car" 
         /// </summary>
         /// <returns>"Car"</returns>
-        public string VehicleType(string Car)
+        public string VehicleType()
         {
             return "Car";
         }
