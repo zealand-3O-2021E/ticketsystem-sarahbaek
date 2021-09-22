@@ -10,9 +10,15 @@ namespace ClassLibraryTicketSystem
         {
 
         }
+
+        public Car(string licencePlate, DateTime date, bool broBizz)
+        : base(licencePlate, date, broBizz)
+        {
+
+        }
         /// <summary>
         ///Method  
-       /// public double Price() The price is fixed at 240 which must be returned
+        /// public double Price() The price is fixed at 240 which must be returned
         /// </summary>
         /// <returns>240.00</returns>
         //public double Price()

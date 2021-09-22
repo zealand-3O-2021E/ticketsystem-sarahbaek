@@ -10,8 +10,8 @@ namespace ClassLibraryTicketSystem
     {
         //public string LicencePlate { get; set; }
         //public DateTime Date { get; set; }
-        public MC(string licencePlate, DateTime date )
-        :base(licencePlate,  date)
+        public MC(string licencePlate, DateTime date , bool broBizz)
+        :base(licencePlate,  date, broBizz)
         {
 
         }
@@ -23,7 +23,20 @@ namespace ClassLibraryTicketSystem
         /// <returns>125.00</returns>
         public override double Price()
         {
-            return 125.00;
+            double price = 125;
+
+            if (BroBizz)
+            {
+                double discount = (price * 0.05);
+                price = price - discount;
+                return price;
+            }
+            else
+            {
+                return price;
+            }
+
+          
         }
 
         /// <summary>

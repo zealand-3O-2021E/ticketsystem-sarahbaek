@@ -19,12 +19,12 @@ namespace ClassLibraryTicketSystem.Tests
         public void PriceTest_CorrectPrice_Pass()
         {
             //Arrange
-            double Expected = 240.00;
+            double Expected = 240.00 ;
             //Act
-            Car car1 = new Car("ASFDGHY", DateTime.Today);
+            Car car1 = new Car("ASFDGHY", DateTime.Today, false );
             double Actual = car1.Price();
             //Assert
-            Assert.AreEqual(Expected, Actual);
+            Assert.AreEqual(Expected, Actual, 0.01);
             //Assert.Fail();
         }
 
@@ -41,7 +41,18 @@ namespace ClassLibraryTicketSystem.Tests
             //Assert.Fail();
         }
 
-     
-
+        [TestMethod()]
+        public void PriceTest_CorrectPrice_Pass_Testing_Brobizz()
+        {
+            //Arrange
+            double Expected = 240.00 - (0.05 * 240);
+            //Act
+            Car car1 = new Car("ASFDGHY", DateTime.Today, true);
+            double Actual = car1.Price();
+            //Assert
+            Assert.AreEqual(Expected, Actual, 0.01);
+    
+            //Assert.Fail();
+        }
     }
 }
