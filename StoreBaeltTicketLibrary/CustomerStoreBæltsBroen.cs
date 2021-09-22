@@ -79,6 +79,9 @@ namespace StoreBaeltTicketLibrary
                 return false;
         }
 
-
+        //public static void WeekendDiscountOnCarsOnly(object v1, object c1)
+        //{
+        //    throw new NotImplementedException();
+        //}
     }
 }

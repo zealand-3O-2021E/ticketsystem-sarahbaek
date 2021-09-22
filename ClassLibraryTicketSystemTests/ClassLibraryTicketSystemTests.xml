@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ClassLibraryTicketSystemTests</name>
+    </assembly>
+    <members>
+        <member name="M:ClassLibraryTicketSystem.Tests.CarTests.PriceTest_CorrectPrice_Pass">
+            <summary>
+            Testing the Price method. It should retun a double 240.00.
+            </summary>
+        </member>
+    </members>
+</doc>
