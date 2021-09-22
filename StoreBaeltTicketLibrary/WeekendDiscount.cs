@@ -2,7 +2,8 @@
 
 namespace StoreBaeltTicketLibrary
 {
-    public class Class1
+    public class WeekendDiscount
     {
+
     }
 }
