@@ -4,6 +4,35 @@
         <name>ClassLibraryTicketSystem</name>
     </assembly>
     <members>
+        <member name="M:ClassLibraryTicketSystem.Car.#ctor">
+            <summary>
+            Empty Constructor
+            </summary>
+        </member>
+        <member name="M:ClassLibraryTicketSystem.Car.#ctor(System.String,System.DateTime)">
+            <summary>
+            Overloaded Constructor with 2 parameters licenceplate and date
+            </summary>
+            <param name="licencePlate"></param>
+            <param name="date"></param>
+        </member>
+        <member name="M:ClassLibraryTicketSystem.Car.#ctor(System.String,System.DateTime,System.Boolean)">
+            <summary>
+            Overloaded Constructor with 3 parameters- licenceplate, date and brobizz
+            </summary>
+            <param name="licencePlate"></param>
+            <param name="date"></param>
+            <param name="broBizz"></param>
+        </member>
+        <member name="M:ClassLibraryTicketSystem.Car.#ctor(System.String,System.DateTime,System.Boolean,System.String)">
+            <summary>
+            Overloaded Constructor with 4 parameters
+            </summary>
+            <param name="licencePlate"></param>
+            <param name="date"></param>
+            <param name="broBizz"></param>
+            <param name="bridgeName"></param>
+        </member>
         <!-- Badly formed XML comment ignored for member "M:ClassLibraryTicketSystem.MC.Price" -->
         <member name="M:ClassLibraryTicketSystem.MC.VehicleType">
             <summary>

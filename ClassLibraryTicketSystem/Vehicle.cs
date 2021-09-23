@@ -46,12 +46,27 @@ namespace ClassLibraryTicketSystem
                 throw new System.Reflection.TargetParameterCountException("Are there 7 characters?");
             }
         }
+
+        public Vehicle(string licensePlate, DateTime date, bool broBizz, string bridgeName) : this(licensePlate, date, broBizz)
+        {
+            LicensePlate = licensePlate;
+            if (licensePlate.Length > 7)
+            {
+                //throw new ArgumentOutOfRangeException("The licenceplate should not be more than 7 characters.");
+                throw new System.Reflection.TargetParameterCountException("Are there 7 characters?");
+            }
+
+            Date = date;
+            BridgeName = bridgeName;
+        }
+
         /// <summary>
         /// Properties
         /// </summary>
         public string LicensePlate { get; set; }
         public DateTime Date { get; set; }
         public bool BroBizz { get => _broBizz; set => _broBizz = value; }
+        public string BridgeName { get; set; }
 
 
         /// <summary>
