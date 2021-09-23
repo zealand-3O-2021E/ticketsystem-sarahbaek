@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StoreBaeltTicketLibraryTest
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OresundBronTicketLibrary", "OresundBronTicketLibrary\OresundBronTicketLibrary.csproj", "{545464E2-C979-414E-8579-FD2B4AF87C88}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OresundBronTicketLibraryTests", "OresundBronTicketLibraryTests\OresundBronTicketLibraryTests.csproj", "{F4D90BE0-5944-4782-AFF1-EF33A46E9479}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{545464E2-C979-414E-8579-FD2B4AF87C88}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{545464E2-C979-414E-8579-FD2B4AF87C88}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{545464E2-C979-414E-8579-FD2B4AF87C88}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4D90BE0-5944-4782-AFF1-EF33A46E9479}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4D90BE0-5944-4782-AFF1-EF33A46E9479}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4D90BE0-5944-4782-AFF1-EF33A46E9479}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4D90BE0-5944-4782-AFF1-EF33A46E9479}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
