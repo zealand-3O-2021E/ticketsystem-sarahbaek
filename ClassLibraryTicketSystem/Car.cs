@@ -4,7 +4,10 @@ namespace ClassLibraryTicketSystem
 {
     public class Car : Vehicle
     {
+        public Car()
+        {
 
+        }
         public Car(string licencePlate, DateTime date) 
         : base(licencePlate, date)
         {

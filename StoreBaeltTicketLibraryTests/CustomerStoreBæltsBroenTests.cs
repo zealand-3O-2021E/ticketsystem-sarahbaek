@@ -19,35 +19,44 @@ namespace StoreBaeltTicketLibrary.Tests
         [TestMethod()]
         public void WeekendDiscountOnCarsOnlyTest()
         {
-            //Arrange
-            Vehicle v1 = new Car("ASGF", DateTime.Today, true);
-            
-            
-             CustomerStoreBæltsBroen.WeekendDiscountOnCarsOnly(v1, v1);
-
-            //Act
-
-            //Assert
-            Assert.AreEqual(v1, v1);
-            Assert.Fail();
+           //Arrange
+           Car c1 = new Car("ASGF", DateTime.Today, true);
+           Vehicle v1 =  c1;
+           //Act
+           CustomerStoreBæltsBroen.WeekendDiscountOnCarsOnly(v1, c1);
+           //Assert
+           Assert.AreEqual(v1, c1);
+           //Assert.Fail();
         }
 
         //[TestMethod()]
+        //[DataRow(Car c1)]
         //public void SerializeObjectTest()
         //{
         //    //Arrange
+        //    Car c1 = new Car("ASGF", DateTime.Today, true);
+        //    //Vehicle v1 = c1;
         //    //Act
+        //   //string cc=  SerializeObject<Car>(c1);
+        //    var Json = Newtonsoft.Json.JsonConvert.SerializeObject(c1);
+
+
         //    //Assert
-        //    Assert.Fail();
+        //    Assert.AreEqual(c1, Json);
+        //    //Assert.Fail();
         //}
 
-        //[TestMethod()]
-        //public void EqualToTest()
-        //{
-        //    //Arrange
-        //    //Act
-        //    //Assert
-        //    Assert.Fail();
-        //}
+        [TestMethod()]
+        public void EqualToTest_ComparingIfACarIsAVehicle_PassingTest()
+        {
+            //Arrange
+            Car c1 = new Car("ASGF", DateTime.Today, true);
+            Vehicle v1 = c1;
+            //Act
+         bool AreEqual =    v1.EqualTo(c1);
+            //Assert
+            Assert.AreEqual(v1, c1);
+            //Assert.Fail();
+        }
     }
 }
