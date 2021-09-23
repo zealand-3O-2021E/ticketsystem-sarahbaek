@@ -9,7 +9,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ClassLibraryTicketSystemTests\ClassLibraryTicketSystemTests.csproj" />
     <ProjectReference Include="..\ClassLibraryTicketSystem\ClassLibraryTicketSystem.csproj" />
   </ItemGroup>
 

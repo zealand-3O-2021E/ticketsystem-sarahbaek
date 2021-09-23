@@ -5,8 +5,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ClassLibraryTicketSystemTests\ClassLibraryTicketSystemTests.csproj" />
     <ProjectReference Include="..\ClassLibraryTicketSystem\ClassLibraryTicketSystem.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="ClassLibraryTicketSystem">
+      <HintPath>..\ClassLibraryTicketSystem\bin\Debug\net5.0\ClassLibraryTicketSystem.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>
