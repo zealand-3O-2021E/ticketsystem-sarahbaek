@@ -38,11 +38,6 @@
             </summary>
             <returns>"Car"</returns>
         </member>
-        <member name="M:OresundBronTicketLibrary.Customer.MyTrips">
-            <summary>
-            Incomplete Not tested
-            </summary>
-        </member>
         <member name="M:OresundBronTicketLibrary.MotorCycle.Price">
              <summary>
             Method  

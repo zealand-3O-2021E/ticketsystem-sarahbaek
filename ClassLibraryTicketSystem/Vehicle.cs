@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace ClassLibraryTicketSystem
 {
     /// <summary>
-    /// An Vehicle abstract class that has methods that can be inherited and overriden by child classes
+    /// A Vehicle abstract class that has methods that can be inherited and overriden by child classes
     /// </summary>
     public abstract class Vehicle
     {
@@ -104,6 +104,7 @@ namespace ClassLibraryTicketSystem
         public bool BroBizz { get => _broBizz; set => _broBizz = value; }
         public string BridgeName { get; set; }
 
+
         //public VehicleType VehicleTypeID { get; set; }
 
 
@@ -131,8 +132,6 @@ namespace ClassLibraryTicketSystem
             {
                 return price;
             }
-
-
         }
 
         /// <summary>

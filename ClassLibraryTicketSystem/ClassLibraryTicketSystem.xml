@@ -43,7 +43,7 @@
         </member>
         <member name="T:ClassLibraryTicketSystem.Vehicle">
             <summary>
-            An Vehicle abstract class that has methods that can be inherited and overriden by child classes
+            A Vehicle abstract class that has methods that can be inherited and overriden by child classes
             </summary>
         </member>
         <member name="F:ClassLibraryTicketSystem.Vehicle._broBizz">
