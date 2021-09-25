@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace ClassLibraryTicketSystem
 {
-    public class MC : Vehicle
+
+    public class MotorCycle : Vehicle
     {
         //public string LicencePlate { get; set; }
         //public DateTime Date { get; set; }
-        public MC(string licencePlate, DateTime date , bool broBizz)
-        :base(licencePlate,  date, broBizz)
+        public MotorCycle(string licencePlate, DateTime date, bool broBizz)
+        : base(licencePlate, date, broBizz)
         {
 
         }
@@ -36,7 +37,7 @@ namespace ClassLibraryTicketSystem
                 return price;
             }
 
-          
+
         }
 
         /// <summary>

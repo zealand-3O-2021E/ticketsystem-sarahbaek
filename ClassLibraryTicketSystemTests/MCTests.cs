@@ -17,7 +17,7 @@ namespace ClassLibraryTicketSystem.Tests
         {
             //Arrange
             double Expected = 125.00;
-            MC mc1 = new MC("ABCDEFG",DateTime.Today, false);
+            MotorCycle mc1 = new MotorCycle("ABCDEFG",DateTime.Today, false);
             
             //Act
            double Actuual =  mc1.Price();
@@ -31,7 +31,7 @@ namespace ClassLibraryTicketSystem.Tests
         {
             //Arrange
             string Expected = "MC";
-            MC mc1 = new MC("ABCDEFG", DateTime.Today, false);
+            MotorCycle mc1 = new MotorCycle("ABCDEFG", DateTime.Today, false);
 
             //Act
             string Actual=   mc1.VehicleType();
@@ -47,7 +47,7 @@ namespace ClassLibraryTicketSystem.Tests
             //Arrange
             double Expected = 125.00 - (0.05 * 125);
             //Act
-            MC mc1 = new MC("ASFDGHY", DateTime.Today, true);
+            MotorCycle mc1 = new MotorCycle("ASFDGHY", DateTime.Today, true);
             double Actual = mc1.Price();
             //Assert
             Assert.AreEqual(Expected, Actual, 0.01);

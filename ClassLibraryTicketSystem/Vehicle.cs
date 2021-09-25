@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace ClassLibraryTicketSystem
 {
     /// <summary>
@@ -14,7 +15,7 @@ namespace ClassLibraryTicketSystem
         /// <summary>
         /// Instance Field
         /// </summary>
-      private bool _broBizz = false ;
+        private bool _broBizz = false;
         /// <summary>
         /// Constructor with no parameters
         /// </summary>
@@ -22,6 +23,7 @@ namespace ClassLibraryTicketSystem
         {
 
         }
+
         /// <summary>
         /// Constructor with 3 parameters
         /// </summary>
@@ -39,12 +41,12 @@ namespace ClassLibraryTicketSystem
             Date = date;
             BroBizz = broBizz;
         }
-     /// <summary>
-     /// Constructor with 2 parameters
-     /// </summary>
-     /// <param name="licensePlate"></param>
-     /// <param name="date"></param>
-       public Vehicle(string licensePlate, DateTime date)
+        /// <summary>
+        /// Constructor with 2 parameters
+        /// </summary>
+        /// <param name="licensePlate"></param>
+        /// <param name="date"></param>
+        public Vehicle(string licensePlate, DateTime date)
         {
             LicensePlate = licensePlate;
             if (licensePlate.Length > 7)
@@ -88,14 +90,26 @@ namespace ClassLibraryTicketSystem
             BridgeName = bridgeName;
         }
 
+
+
+
         /// <summary>
         /// Properties
         /// </summary>
+
+
+        public int VehicleID { get; set; }
         public string LicensePlate { get; set; }
         public DateTime Date { get; set; }
         public bool BroBizz { get => _broBizz; set => _broBizz = value; }
         public string BridgeName { get; set; }
 
+        //public VehicleType VehicleTypeID { get; set; }
+
+
+
+        //VehicleType myVehicleType1 = new VehicleType(1, "Car");
+        //VehicleType myVehicleType2 = new VehicleType(1, "MC");
 
 
         /// <summary>
@@ -106,7 +120,7 @@ namespace ClassLibraryTicketSystem
         public virtual double Price()
         {
             double price = 240;
-         
+
             if (BroBizz)
             {
                 double discount = (price * 0.05);

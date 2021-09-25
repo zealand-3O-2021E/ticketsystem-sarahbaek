@@ -16,7 +16,7 @@ namespace ClassLibraryTicketSystem
         /// </summary>
         /// <param name="licencePlate"></param>
         /// <param name="date"></param>
-        public Car(string licencePlate, DateTime date) 
+        public Car(string licencePlate, DateTime date)
         : base(licencePlate, date)
         {
 
@@ -45,6 +45,6 @@ namespace ClassLibraryTicketSystem
         {
 
         }
-        
+
     }
 }
