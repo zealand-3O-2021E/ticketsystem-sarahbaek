@@ -38,26 +38,24 @@ namespace StoreBaeltTicketLibrary
 
         public static double WeekendDiscountOnCarsOnly(this Vehicle vehicle, Car car)
         {
+            //Deduct the weekend discount, then deduct the normal discount
             double price = 240;
-            double weekendPrice = 0;
             double broBizzNormalDiscount = price * 0.05;
-            double weekendPriceDeductBroBizzNormalDicsount = price - broBizzNormalDiscount;
-
-
+            
             if ((dayToday == DayOfWeek.Saturday) || (dayToday == DayOfWeek.Sunday) && (EqualTo(vehicle, car) == true))
             {
-                broBizzNormalDiscount = price * 0.05;
-
-                weekendPriceDeductBroBizzNormalDicsount = price - broBizzNormalDiscount;
-
-                double weekend20PercentDiscount = (20 * weekendPriceDeductBroBizzNormalDicsount) / 100;
-
-                weekendPrice = weekendPriceDeductBroBizzNormalDicsount - weekend20PercentDiscount;
-                return (weekendPrice);
+                //Calculating the weekend discount thats 20% of 240.
+               double weekendPrice20Discount = price * 0.20;
+                //Deducting the discount from the original price  240- (0.20 * 240)= 192
+               double weekendPriceMinus20Discount = price - weekendPrice20Discount;
+                //Calculating the brobizz that is 5% discount of the weekend discount i.e (192 * 0.05 )= 9.6
+               double   weekendDisccountBroBizzWeekend = 0.05 * weekendPriceMinus20Discount;
+                //Calculating the final price which is the weekendPrice  - brobiss discount i.e (192-9.6)= 182.4
+              double  FinalWeekendPrice = weekendPriceMinus20Discount - weekendDisccountBroBizzWeekend;
+               
+                return (FinalWeekendPrice);
             }
                 return broBizzNormalDiscount;
-            
-           
         }
 
 

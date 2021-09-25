@@ -58,8 +58,6 @@ namespace OresundBronTicketLibrary
             {
                 return price;
             }
-
-
         }
 
         /// <summary>
@@ -71,7 +69,6 @@ namespace OresundBronTicketLibrary
         {
             return "Oresund Car";
         }
-
 
     }
 }

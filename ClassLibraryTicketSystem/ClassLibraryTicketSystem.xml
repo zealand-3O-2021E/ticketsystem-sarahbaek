@@ -41,6 +41,51 @@
             </summary>
             <returns>"MC"</returns>
         </member>
+        <member name="T:ClassLibraryTicketSystem.Vehicle">
+            <summary>
+            An Vehicle abstract class that has methods that can be inherited and overriden by child classes
+            </summary>
+        </member>
+        <member name="F:ClassLibraryTicketSystem.Vehicle._broBizz">
+            <summary>
+            Instance Field
+            </summary>
+        </member>
+        <member name="M:ClassLibraryTicketSystem.Vehicle.#ctor">
+            <summary>
+            Constructor with no parameters
+            </summary>
+        </member>
+        <member name="M:ClassLibraryTicketSystem.Vehicle.#ctor(System.String,System.DateTime,System.Boolean)">
+            <summary>
+            Constructor with 3 parameters
+            </summary>
+            <param name="licensePlate"></param>
+            <param name="date"></param>
+            <param name="broBizz"></param>
+        </member>
+        <member name="M:ClassLibraryTicketSystem.Vehicle.#ctor(System.String,System.DateTime)">
+            <summary>
+            Constructor with 2 parameters
+            </summary>
+            <param name="licensePlate"></param>
+            <param name="date"></param>
+        </member>
+        <member name="M:ClassLibraryTicketSystem.Vehicle.#ctor(System.String)">
+            <summary>
+            Constructor that throws an exception when the licence plate is longer than 7 characters
+            </summary>
+            <param name="licensePlate"></param>
+        </member>
+        <member name="M:ClassLibraryTicketSystem.Vehicle.#ctor(System.String,System.DateTime,System.Boolean,System.String)">
+            <summary>
+            Constructor that takes 4 parameters
+            </summary>
+            <param name="licensePlate"></param>
+            <param name="date"></param>
+            <param name="broBizz"></param>
+            <param name="bridgeName"></param>
+        </member>
         <member name="P:ClassLibraryTicketSystem.Vehicle.LicensePlate">
             <summary>
             Properties

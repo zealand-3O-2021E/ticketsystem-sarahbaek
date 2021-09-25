@@ -6,14 +6,28 @@ using System.Threading.Tasks;
 
 namespace ClassLibraryTicketSystem
 {
+    /// <summary>
+    /// An Vehicle abstract class that has methods that can be inherited and overriden by child classes
+    /// </summary>
     public abstract class Vehicle
     {
+        /// <summary>
+        /// Instance Field
+        /// </summary>
       private bool _broBizz = false ;
+        /// <summary>
+        /// Constructor with no parameters
+        /// </summary>
         public Vehicle()
         {
 
         }
-
+        /// <summary>
+        /// Constructor with 3 parameters
+        /// </summary>
+        /// <param name="licensePlate"></param>
+        /// <param name="date"></param>
+        /// <param name="broBizz"></param>
         public Vehicle(string licensePlate, DateTime date, bool broBizz)
         {
             LicensePlate = licensePlate;
@@ -25,7 +39,11 @@ namespace ClassLibraryTicketSystem
             Date = date;
             BroBizz = broBizz;
         }
-     
+     /// <summary>
+     /// Constructor with 2 parameters
+     /// </summary>
+     /// <param name="licensePlate"></param>
+     /// <param name="date"></param>
        public Vehicle(string licensePlate, DateTime date)
         {
             LicensePlate = licensePlate;
@@ -37,6 +55,10 @@ namespace ClassLibraryTicketSystem
 
             Date = date;
         }
+        /// <summary>
+        /// Constructor that throws an exception when the licence plate is longer than 7 characters
+        /// </summary>
+        /// <param name="licensePlate"></param>
         public Vehicle(string licensePlate)
         {
             LicensePlate = licensePlate;
@@ -46,7 +68,13 @@ namespace ClassLibraryTicketSystem
                 throw new System.Reflection.TargetParameterCountException("Are there 7 characters?");
             }
         }
-
+        /// <summary>
+        /// Constructor that takes 4 parameters
+        /// </summary>
+        /// <param name="licensePlate"></param>
+        /// <param name="date"></param>
+        /// <param name="broBizz"></param>
+        /// <param name="bridgeName"></param>
         public Vehicle(string licensePlate, DateTime date, bool broBizz, string bridgeName) : this(licensePlate, date, broBizz)
         {
             LicensePlate = licensePlate;
@@ -67,6 +95,7 @@ namespace ClassLibraryTicketSystem
         public DateTime Date { get; set; }
         public bool BroBizz { get => _broBizz; set => _broBizz = value; }
         public string BridgeName { get; set; }
+
 
 
         /// <summary>
