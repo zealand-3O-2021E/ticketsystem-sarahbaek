@@ -90,7 +90,11 @@ namespace ClassLibraryTicketSystem
             BridgeName = bridgeName;
         }
 
-
+        //public Vehicle(int vehicleID)
+        //{
+        //    VehicleID = vehicleID;
+        //    //Trip1List = new List<Trip1>();
+        //}
 
 
         /// <summary>
@@ -103,6 +107,9 @@ namespace ClassLibraryTicketSystem
         public DateTime Date { get; set; }
         public bool BroBizz { get => _broBizz; set => _broBizz = value; }
         public string BridgeName { get; set; }
+
+        //Lists in a vehicle 
+        //public List<Trip1> Trip1List { get; set; }
 
 
         //public VehicleType VehicleTypeID { get; set; }
