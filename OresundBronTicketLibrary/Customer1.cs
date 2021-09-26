@@ -8,14 +8,17 @@ namespace OresundBronTicketLibrary
 {
     public  class Customer1
     {
-        public Customer1(int customerID, string customerName)
+        public Customer1(int customer1ID, string customer1Name)
         {
-            CustomerID = customerID;
-            CustomerName = customerName;
+            Customer1ID = customer1ID;
+            Customer1Name = customer1Name;
+            CustomerVehiclesList = new List<CustomerVehicles>();
+            BroBizzSubscriptionsList = new List<BroBizzSubscriptions>();
         }
 
-        public int CustomerID { get; set; }
-        public string CustomerName { get; set; }
-
+        public int Customer1ID { get; set; }
+        public string Customer1Name { get; set; }
+        public List<BroBizzSubscriptions> BroBizzSubscriptionsList { get; set; }
+        public List<CustomerVehicles> CustomerVehiclesList { get; set; }
     }
 }
