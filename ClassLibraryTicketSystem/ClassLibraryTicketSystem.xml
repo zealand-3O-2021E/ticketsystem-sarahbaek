@@ -41,6 +41,48 @@
             </summary>
             <returns>"MC"</returns>
         </member>
+        <member name="M:ClassLibraryTicketSystem.StoreBælt_Bridge_Record.BrobizzCustomersDiscount_Car(System.Boolean)">
+            <summary>
+            Methoc calculates the car price of the brige when a brobizz discount is deduted
+            </summary>
+            <param name="broBizz"></param>
+            <returns>price</returns>
+        </member>
+        <member name="M:ClassLibraryTicketSystem.StoreBælt_Bridge_Record.BrobizzCustomersDiscount_MC(System.Boolean)">
+            <summary>
+            // Method calculates the MC price of the brige when a brobizz discount is deduted
+            </summary>
+            <param name="broBizz"></param>
+            <returns>price</returns>
+        </member>
+        <member name="M:ClassLibraryTicketSystem.StoreBælt_Bridge_Record.EverydayPrice_Car">
+            <summary>
+            Method calculated the brige price for a car that does not have a brobizz
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ClassLibraryTicketSystem.StoreBælt_Bridge_Record.EverydayPrice_MC">
+            <summary>
+            Method calculated the brige price for a MC that does not have a brobizz
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ClassLibraryTicketSystem.StoreBælt_Bridge_Record.WeekendBroBizzCustomersPrice_Car(ClassLibraryTicketSystem.Vehicle,ClassLibraryTicketSystem.Car)">
+            <summary>
+            The method calculates the price for the weekend for a car that has a brobizz
+            </summary>
+            <param name="vehicle"></param>
+            <param name="car"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClassLibraryTicketSystem.StoreBælt_Bridge_Record.Weekend_NoBroBizz_Price_Car(ClassLibraryTicketSystem.Vehicle,ClassLibraryTicketSystem.Car)">
+            <summary>
+            The method calculates the price for the weekend for a car that does NOT have a brobizz
+            </summary>
+            <param name="vehicle"></param>
+            <param name="car"></param>
+            <returns>weekendPrice</returns>
+        </member>
         <member name="T:ClassLibraryTicketSystem.Vehicle">
             <summary>
             A Vehicle abstract class that has methods that can be inherited and overriden by child classes

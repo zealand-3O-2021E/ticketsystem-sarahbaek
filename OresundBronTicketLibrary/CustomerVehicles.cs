@@ -1,18 +1,18 @@
 ﻿
-using ClassLibraryTicketSystem;
-using System;
+//using ClassLibraryTicketSystem;
+//using System;
 
-namespace OresundBronTicketLibrary
-{
-    public  class CustomerVehicles : Vehicle
-    {
-        public CustomerVehicles(int vehicleID, int customerID)
-        {
-            VehicleID = vehicleID;
-            CustomerID = customerID;
-        }
+//namespace OresundBronTicketLibrary
+//{
+//    public  class CustomerVehicles : Vehicle
+//    {
+//        public CustomerVehicles(int customerVehicleID, int customer1ID)
+//        {
+//            CustomerVehicleID = customerVehicleID;
+//            Customer1ID = customer1ID;
+//        }
 
-        public int VehicleID { get; set; }
-        public int CustomerID { get; set; }
-    }
-}
+//        public int CustomerVehicleID { get; set; }
+//        public int Customer1ID { get; set; }
+//    }
+//}

@@ -4,17 +4,5 @@
         <name>StoreBaeltTicketLibrary</name>
     </assembly>
     <members>
-        <member name="T:StoreBaeltTicketLibrary.CustomerStoreBæltsBroen">
-             <summary>
-             Task 9 – Storebæltsbroen weekend discount 
-              A weekend discount is now to be introduced which means that if you drive across the bridge, 
-            Saturday or Sunday you get a 20% discount.This discount applies only to cars.The Brobizz
-            discount must be deducted afterwards the weekend discount.
-            Check how much you've tested your code through Code Coverage. Write Test so you have 
-            covered your code reasonably. NOTE: Remember to give the test methods a descriptive
-            name
-            Remember to commit and push
-             </summary>
-        </member>
     </members>
 </doc>

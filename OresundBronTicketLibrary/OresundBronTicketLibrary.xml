@@ -4,53 +4,5 @@
         <name>OresundBronTicketLibrary</name>
     </assembly>
     <members>
-        <member name="M:OresundBronTicketLibrary.Car.#ctor">
-            <summary>
-            Empty Constructor
-            </summary>
-        </member>
-        <member name="M:OresundBronTicketLibrary.Car.#ctor(System.String,System.DateTime)">
-            <summary>
-            Overloaded Constructor that takes in a licence plate and date as parameters
-            </summary>
-            <param name="licencePlate"></param>
-            <param name="date"></param>
-        </member>
-        <member name="M:OresundBronTicketLibrary.Car.#ctor(System.String,System.DateTime,System.Boolean)">
-            <summary>
-            Anonther overloaded constructor that takes in a licence plate, date and brobizz as parameters
-            </summary>
-            <param name="licencePlate"></param>
-            <param name="date"></param>
-            <param name="broBizz"></param>
-        </member>
-        <member name="M:OresundBronTicketLibrary.Car.Price">
-             <summary>
-            Method  
-             public double Price() The price is fixed at 410 which must be returned, but if you have a brobizz the price is 161kr.
-             </summary>
-             <returns>410</returns>
-        </member>
-        <member name="M:OresundBronTicketLibrary.Car.VehicleType">
-            <summary>
-            Method
-            public string VehicleType() which returns the string "Oresund Car" 
-            </summary>
-            <returns>"Car"</returns>
-        </member>
-        <member name="M:OresundBronTicketLibrary.MotorCycle.Price">
-             <summary>
-            Method  
-             public double Price() The price is fixed at 210 which must be returned, but if you have a brobizz the price is 73kr.
-             </summary>
-             <returns>210</returns>
-        </member>
-        <member name="M:OresundBronTicketLibrary.MotorCycle.VehicleType">
-            <summary>
-            Method
-            public string VehicleType() which returns the string "Oresund MC" 
-            </summary>
-            <returns>"Car"</returns>
-        </member>
     </members>
 </doc>

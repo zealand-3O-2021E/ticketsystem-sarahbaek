@@ -9,10 +9,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ClassLibraryTicketSystem\ClassLibraryTicketSystem.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Reference Include="ClassLibraryTicketSystem">
       <HintPath>..\ClassLibraryTicketSystem\bin\Debug\net5.0\ref\ClassLibraryTicketSystem.dll</HintPath>
     </Reference>

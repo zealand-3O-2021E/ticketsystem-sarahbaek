@@ -90,6 +90,8 @@ namespace ClassLibraryTicketSystem
             BridgeName = bridgeName;
         }
 
+        //internal abstract object SerializeObject();
+
         //public Vehicle(int vehicleID)
         //{
         //    VehicleID = vehicleID;
