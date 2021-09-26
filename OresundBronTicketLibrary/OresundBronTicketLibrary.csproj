@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
@@ -7,10 +7,6 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DocumentationFile>C:\Users\sbaek\Source\Repos\ticketsystem-sarahbaek\OresundBronTicketLibrary\OresundBronTicketLibrary.xml</DocumentationFile>
   </PropertyGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\StoreBaeltTicketLibrary\StoreBaeltTicketLibrary.csproj" />
-  </ItemGroup>
 
   <ItemGroup>
     <Reference Include="ClassLibraryTicketSystem">
