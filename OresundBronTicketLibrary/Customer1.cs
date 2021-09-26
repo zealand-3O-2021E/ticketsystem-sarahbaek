@@ -15,7 +15,13 @@ namespace OresundBronTicketLibrary
             CustomerVehiclesList = new List<CustomerVehicles>();
             BroBizzSubscriptionsList = new List<BroBizzSubscriptions>();
         }
-
+        public Customer1(int customer1ID)
+        {
+            Customer1ID = customer1ID;
+            //Customer1Name = customer1Name;
+            CustomerVehiclesList = new List<CustomerVehicles>();
+            BroBizzSubscriptionsList = new List<BroBizzSubscriptions>();
+        }
         public int Customer1ID { get; set; }
         public string Customer1Name { get; set; }
         public List<BroBizzSubscriptions> BroBizzSubscriptionsList { get; set; }
