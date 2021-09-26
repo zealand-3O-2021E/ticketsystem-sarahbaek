@@ -7,8 +7,24 @@
 
 //namespace ClassLibraryTicketSystem
 //{
-//    public record StoreBælt_Bridge_Record(int BridgeID, string BridgeName) : IBridge
+//    //public record StoreBælt_Bridge_Record(int BridgeID, string BridgeName) : IBridge
+//    //{
+//    public class StoreBælt_Bridge_Record
 //    {
+//        public StoreBælt_Bridge_Record()
+//        {
+
+//        }
+//        public StoreBælt_Bridge_Record(int bridgeID, string bridgeName)
+//        {
+//            BridgeID = bridgeID;
+//            BridgeName = bridgeName;
+//        }
+
+//        public int BridgeID { get; set; }
+//        public string BridgeName { get; set; }
+  
+
 //        private bool BroBizz;
 //        private DayOfWeek dayToday;
 
@@ -20,7 +36,7 @@
 //        /// <param name="broBizz"></param>
 //        /// <returns>price</returns>
 //        public double BrobizzCustomersDiscount_Car(bool broBizz)
-//{
+//        {
 //            double price = 240;
 
 //            if (BroBizz)
@@ -71,7 +87,7 @@
 //            double price = 240;
 //            double discount = (price * 0.05);
 //            price = price - discount;
-//             return price;
+//            return price;
 //        }
 
 
@@ -85,10 +101,10 @@
 //            double price = 125;
 //            double discount = (price * 0.05);
 //            price = price - discount;
-//             return price;
+//            return price;
 //        }
 
- 
+
 
 
 
@@ -106,8 +122,8 @@
 //            double broBizzNormalDiscount = price * 0.05;
 
 //            //if ((dayToday == DayOfWeek.Saturday) || (dayToday == DayOfWeek.Sunday) && (EqualTo(vehicle, car) == true))
-//                if ((dayToday == DayOfWeek.Saturday) || (dayToday == DayOfWeek.Sunday) &&  (vehicle == car))
-//                {
+//            if ((dayToday == DayOfWeek.Saturday) || (dayToday == DayOfWeek.Sunday) && (vehicle == car))
+//            {
 //                //Calculating the weekend discount thats 20% of 240.
 //                double weekendPrice20Discount = price * 0.20;
 //                //Deducting the discount from the original price  240- (0.20 * 240)= 192
@@ -137,7 +153,7 @@
 //            double broBizzNormalDiscount = price * 0.05;
 
 //            //if ((dayToday == DayOfWeek.Saturday) || (dayToday == DayOfWeek.Sunday) && (EqualTo(vehicle, car) == true))
-//            if ((dayToday == DayOfWeek.Saturday) || (dayToday == DayOfWeek.Sunday) && (vehicle == car) && (BroBizz== false))
+//            if ((dayToday == DayOfWeek.Saturday) || (dayToday == DayOfWeek.Sunday) && (vehicle == car) && (BroBizz == false))
 //            {
 //                broBizzNormalDiscount = price * 0.05;
 //                double weekendPrice = price - broBizzNormalDiscount;
@@ -149,7 +165,7 @@
 
 //        public string VehicleType_Car(string car)
 //        {
-        
+
 //            return "Car";
 //        }
 
@@ -161,5 +177,5 @@
 //        }
 //    }
 
-    
+
 //}

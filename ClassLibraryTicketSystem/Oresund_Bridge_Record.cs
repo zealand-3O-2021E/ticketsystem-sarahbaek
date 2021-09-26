@@ -6,8 +6,21 @@
 
 //namespace ClassLibraryTicketSystem
 //{
-//    public record Oresund_Bridge_Record(int BridgeID, string BridgeName) : IBridge
+//    //public record Oresund_Bridge_Record(int BridgeID, string BridgeName) : IBridge
+//    public class Oresund_Bridge_Record
 //    {
+//        public Oresund_Bridge_Record()
+//        {
+
+//        }
+//        public Oresund_Bridge_Record(int bridgeID, string bridgeName)
+//        {
+//            BridgeID = bridgeID;
+//            BridgeName = bridgeName;
+//        }
+
+//        public int BridgeID { get; set; }
+//        public string BridgeName { get; set; }
 //        public bool BroBizz { get; private set; }
 
 //        public double BrobizzCustomersDiscount_Car(bool broBizz)
@@ -40,7 +53,7 @@
 //        {
 //            double price = 410;
 //            return price;
-        
+
 //        }
 
 //        public double EverydayPrice_MC()
@@ -49,7 +62,7 @@
 //            return price;
 //        }
 
-    
+
 //        public double WeekendBroBizzCustomersPrice_Car(Vehicle vehicle, Car car)
 //        {
 //            double price = 410;
@@ -78,7 +91,7 @@
 
 //        public string VehicleType_Car(string car)
 //        {
-//             return "Oresund Car";
+//            return "Oresund Car";
 //        }
 
 //        public string VehicleType_MC(string mc)
