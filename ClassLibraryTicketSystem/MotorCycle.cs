@@ -9,8 +9,7 @@ namespace ClassLibraryTicketSystem
 
     public class MotorCycle : Vehicle
     {
-        //public string LicencePlate { get; set; }
-        //public DateTime Date { get; set; }
+   
         public MotorCycle(string licencePlate, DateTime date, bool broBizz)
         : base(licencePlate, date, broBizz)
         {
@@ -36,8 +35,6 @@ namespace ClassLibraryTicketSystem
             {
                 return price;
             }
-
-
         }
 
         /// <summary>

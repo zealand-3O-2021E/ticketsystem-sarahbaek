@@ -4,5 +4,31 @@
         <name>StoreBaeltTicketLibrary</name>
     </assembly>
     <members>
+        <member name="M:StoreBaeltTicketLibrary.StoreBridgeClass.BrobizzCustomersDiscount_Car(System.Boolean)">
+            <summary>
+            Method calculates the car price of the brige when a brobizz discount is deduted
+            </summary>
+            <param name="broBizz"></param>
+            <returns>price</returns>
+        </member>
+        <member name="M:StoreBaeltTicketLibrary.StoreBridgeClass.BrobizzCustomersDiscount_MC(System.Boolean)">
+            <summary>
+            // Method calculates the MC price of the brige when a brobizz discount is deduted
+            </summary>
+            <param name="broBizz"></param>
+            <returns>price</returns>
+        </member>
+        <member name="M:StoreBaeltTicketLibrary.StoreBridgeClass.EverydayPrice_Car">
+            <summary>
+            Method calculated the brige price for a car that does not have a brobizz
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:StoreBaeltTicketLibrary.StoreBridgeClass.EverydayPrice_MC">
+            <summary>
+            Method calculated the brige price for a MC that does not have a brobizz
+            </summary>
+            <returns></returns>
+        </member>
     </members>
 </doc>

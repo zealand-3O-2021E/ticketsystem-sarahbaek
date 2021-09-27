@@ -90,36 +90,16 @@ namespace ClassLibraryTicketSystem
             BridgeName = bridgeName;
         }
 
-        //internal abstract object SerializeObject();
-
-        //public Vehicle(int vehicleID)
-        //{
-        //    VehicleID = vehicleID;
-        //    //Trip1List = new List<Trip1>();
-        //}
-
+     
 
         /// <summary>
         /// Properties
         /// </summary>
-
-
         public int VehicleID { get; set; }
         public string LicensePlate { get; set; }
         public DateTime Date { get; set; }
         public bool BroBizz { get => _broBizz; set => _broBizz = value; }
         public string BridgeName { get; set; }
-
-        //Lists in a vehicle 
-        //public List<Trip1> Trip1List { get; set; }
-
-
-        //public VehicleType VehicleTypeID { get; set; }
-
-
-
-        //VehicleType myVehicleType1 = new VehicleType(1, "Car");
-        //VehicleType myVehicleType2 = new VehicleType(1, "MC");
 
 
         /// <summary>

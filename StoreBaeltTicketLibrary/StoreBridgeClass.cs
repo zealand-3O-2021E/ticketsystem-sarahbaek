@@ -8,15 +8,25 @@ using System.Threading.Tasks;
 
 namespace StoreBaeltTicketLibrary
 {
-    public record StoreBælt_Bridge_Record(int BridgeID, string BridgeName) : IBridge
+
+    public   class StoreBridgeClass :IBridge
+
     {
+
+        public int BridgeID { get; set; }
+
+        public string BridgeName { get; set; }
+
+        public StoreBridgeClass(int bridgeID, string bridgeName)
+
+        {
+            BridgeID = bridgeID;
+            BridgeName = bridgeName;
+        }
+
         private bool BroBizz;
-        private DayOfWeek dayToday;
-
-
-
         /// <summary>
-        /// Methoc calculates the car price of the brige when a brobizz discount is deduted
+        /// Method calculates the car price of the brige when a brobizz discount is deduted
         /// </summary>
         /// <param name="broBizz"></param>
         /// <returns>price</returns>
@@ -35,8 +45,6 @@ namespace StoreBaeltTicketLibrary
                 return price;
             }
         }
-
-
 
 
         /// <summary>
@@ -89,26 +97,32 @@ namespace StoreBaeltTicketLibrary
             return price;
         }
 
+        public string VehicleType_Car(string car)
+        {
 
+            return "Car";
+        }
 
+        public string VehicleType_MC(string mc)
+        {
 
+            return "MC";
+        }
 
+        public double WeekendBroBizzCustomersPrice_Car( int dayOfTheWeek,   string vehicleType, bool brobizz)
 
-        /// <summary>
-        /// The method calculates the price for the weekend for a car that has a brobizz
-        /// </summary>
-        /// <param name="vehicle"></param>
-        /// <param name="car"></param>
-        /// <returns></returns>
-        public double WeekendBroBizzCustomersPrice_Car(Vehicle vehicle, Car car)
         {
             //Deduct the weekend discount, then deduct the normal discount
             double price = 240;
-            double broBizzNormalDiscount = price * 0.05;
+            double weekendPriceMinus20PctDiscount = price - (price * 0.20);//192
+            int currentDayOfWeek = 0;
+            currentDayOfWeek = (int)System.DayOfWeek.Monday;
 
-            //if ((dayToday == DayOfWeek.Saturday) || (dayToday == DayOfWeek.Sunday) && (EqualTo(vehicle, car) == true))
-            if ((dayToday == DayOfWeek.Saturday) || (dayToday == DayOfWeek.Sunday) && (vehicle == car))
-            {
+            object dayToday = null;
+
+            if ((currentDayOfWeek == 6 || currentDayOfWeek == 7) && (vehicleType == "Car") && (brobizz == true))
+                //if ((currentDayOfWeek == 6 || currentDayOfWeek == 7) && (Vehicle().()"Car") && (brobizz == true))
+                {
                 //Calculating the weekend discount thats 20% of 240.
                 double weekendPrice20Discount = price * 0.20;
                 //Deducting the discount from the original price  240- (0.20 * 240)= 192
@@ -118,49 +132,51 @@ namespace StoreBaeltTicketLibrary
                 //Calculating the final price which is the weekendPrice  - brobiss discount i.e (192-9.6)= 182.4
                 double FinalWeekendPrice = weekendPriceMinus20Discount - weekendDisccountBroBizzWeekend;
 
-                return (FinalWeekendPrice);
-            }
-            return broBizzNormalDiscount;
+                return FinalWeekendPrice;
+            } else
+
+               return weekendPriceMinus20PctDiscount;
         }
 
 
-
-        /// <summary>
-        /// The method calculates the price for the weekend for a car that does NOT have a brobizz
-        /// </summary>
-        /// <param name="vehicle"></param>
-        /// <param name="car"></param>
-        /// <returns>weekendPrice</returns>
-        public double Weekend_NoBroBizz_Price_Car(Vehicle vehicle, Car car)
+        public double Weekend_No_BroBizzPrice_Car(int dayOfTheWeek, string vehicleType, bool brobizz)
         {
-            //Deduct the weekend discount, then deduct the normal discount
             double price = 240;
-            double broBizzNormalDiscount = price * 0.05;
+            double weekendPrice20Discount = price * 0.20 ;//48
+            double weekendPriceMinus20Discount = price - weekendPrice20Discount;//192
+            double weekendDisccountBroBizzWeekend = 0.05 * weekendPriceMinus20Discount;//9.6
+            double FinalWeekendPrice = weekendPriceMinus20Discount - weekendDisccountBroBizzWeekend;//192-9.6 = 182.4
+            int currentDayOfWeek = 0;
+            currentDayOfWeek = (int)System.DayOfWeek.Monday;
+            object dayToday = null;
 
-            //if ((dayToday == DayOfWeek.Saturday) || (dayToday == DayOfWeek.Sunday) && (EqualTo(vehicle, car) == true))
-            if ((dayToday == DayOfWeek.Saturday) || (dayToday == DayOfWeek.Sunday) && (vehicle == car) && (BroBizz == false))
+            if ((currentDayOfWeek == 6 || currentDayOfWeek == 7) && (vehicleType == "Car") && (brobizz == false))
             {
-                broBizzNormalDiscount = price * 0.05;
-                double weekendPrice = price - broBizzNormalDiscount;
-                return (weekendPrice);
+                return weekendPriceMinus20Discount; //192
             }
-            return broBizzNormalDiscount;
+            else if ((currentDayOfWeek != 6 || currentDayOfWeek != 7) && (vehicleType == "Car") && (brobizz == false))
+            {
+                price = 240;
+
+                return price;
+            }
+            else if ((currentDayOfWeek != 6 || currentDayOfWeek != 7) && (vehicleType == "Car") && (brobizz == true))
+            {
+
+                double discount = (price * 0.05);
+                price = price - discount;
+                return price;  //228
+
+            }
+            else /*((currentDayOfWeek == 6 || currentDayOfWeek == 7) && (vehicleType != "Car") && (brobizz == false || brobizz == true))*/
+
+                return 125; //MotorBike 
+
         }
 
-
-        public string VehicleType_Car(string car)
-        {
-
-            return "Car";
-        }
-
-
-        public string VehicleType_MC(string mc)
-        {
-
-            return "MC";
-        }
     }
-
-
 }
+
+
+
+    

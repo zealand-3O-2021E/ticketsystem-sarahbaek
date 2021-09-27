@@ -12,25 +12,6 @@ namespace ClassLibraryTicketSystem.Tests
     [TestClass()]
     public class VehicleTests
     {
-        //[TestMethod()]
-        //public void VehicleTest()
-        //{
-        //    Assert.Fail();
-        //}
-
-        //[TestMethod()]
-        //public void PriceTest()
-        //{
-        //    Assert.Fail();
-        //}
-
-        //[TestMethod()]
-        //public void VehicleTypeTest()
-        //{
-        //    Assert.Fail();
-        //}
-
-
         [TestMethod()]
         //[DataTestMethod]
         [DataRow("ASDFGHJ", 26-04-2021)]
