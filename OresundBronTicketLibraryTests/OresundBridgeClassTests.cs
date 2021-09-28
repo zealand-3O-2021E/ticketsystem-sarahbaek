@@ -1,4 +1,6 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using ClassLibraryTicketSystem;
+
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 using OresundBronTicketLibrary;
 
@@ -89,9 +91,18 @@ namespace OresundBronTicketLibrary.Tests
 
 
         [TestMethod()]
+     
         public void WeekendBroBizzCustomersPrice_CarTest()
         {
-            Assert.Fail();
+            //Arrange
+            double expected = 161;
+            OresundBridgeClass Or_Car = new OresundBridgeClass(2, "Oresund");
+            //Act
+            double ActualPrice = Or_Car.WeekendBroBizzCustomersPrice_Car(7, "Car", true); 
+            //Assert
+            Assert.AreEqual(expected, ActualPrice);
+            //Assert.Fail();
+            //Assert.Fail();
         }
 
 
@@ -99,7 +110,13 @@ namespace OresundBronTicketLibrary.Tests
         [TestMethod()]
         public void Weekend_NoBroBizz_Price_CarTest()
         {
-            Assert.Fail();
+            //Arrange
+            double expected = 410;
+            OresundBridgeClass Or_Car = new OresundBridgeClass(2, "Oresund");
+            //Act
+            double ActualPrice = Or_Car.Weekend_No_BroBizzPrice_Car(1, "Car", false);
+            //Assert
+            Assert.AreEqual(expected, ActualPrice);
         }
 
 
@@ -107,15 +124,31 @@ namespace OresundBronTicketLibrary.Tests
         [TestMethod()]
         public void VehicleType_CarTest()
         {
-            Assert.Fail();
+            //Arrange
+            string Expected = "Oresund Car";
+
+            Car car1 = new Car("ASFDGHY", DateTime.Today);
+            //Act
+
+            string Actual = car1.VehicleType();
+            //Assert
+            Assert.AreEqual(Expected, Actual);
+            //Assert.Fail();
         }
 
 
 
-        [TestMethod()]
-        public void VehicleType_MCTest()
-        {
-            Assert.Fail();
-        }
+        //[TestMethod()]
+        //public void VehicleType_MCTest()
+        //{
+        //    //Arrange
+        //    string Expected = "Oresund MC";
+        //    MotorCycle mc1 = new MotorCycle("ABCDEFG", DateTime.Today, false);
+
+        //    //Act
+        //    string Actual = mc1.VehicleType_MC();
+        //    //Asert
+        //    Assert.AreEqual(Expected, Actual);
+        //}
     }
 }

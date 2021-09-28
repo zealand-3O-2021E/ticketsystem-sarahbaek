@@ -90,7 +90,14 @@ namespace ClassLibraryTicketSystem
             BridgeName = bridgeName;
         }
 
-     
+        public Vehicle( int bridgeID, string vehicleName)
+        {
+       
+            BridgeID = bridgeID;
+            VehicleName = vehicleName;
+        }
+
+
 
         /// <summary>
         /// Properties
@@ -100,8 +107,8 @@ namespace ClassLibraryTicketSystem
         public DateTime Date { get; set; }
         public bool BroBizz { get => _broBizz; set => _broBizz = value; }
         public string BridgeName { get; set; }
-
-
+        public int BridgeID { get; set; }
+        public string VehicleName { get; set; }
         /// <summary>
         ///Method  
         /// public double Price() The price is fixed at 240 which must be returned
@@ -130,9 +137,29 @@ namespace ClassLibraryTicketSystem
         /// <returns>"Car"</returns>
         public virtual string VehicleType()
         {
+            
             return "Car";
         }
 
 
+        public virtual string VehicleType2(int in_bridge, string in_vehicle )
+        {
+            if (in_bridge == 1 && in_vehicle == "Car")
+            {
+                return "Car";
+            }
+            else if (in_bridge == 1 && in_vehicle == "MC")
+            {
+                return "MC";
+            }
+            else if (in_bridge == 2 && in_vehicle == "Car")
+            {
+                return "Oresund Car";
+            }
+            else if (in_bridge == 2 && in_vehicle == "MC")
+                return "Oresund MC";
+            else
+                return "Another bridge";
+        }
     }
 }

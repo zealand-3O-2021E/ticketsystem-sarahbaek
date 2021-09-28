@@ -16,6 +16,14 @@ namespace ClassLibraryTicketSystem
 
         }
 
+        public MotorCycle( int bridgeID, string vehicleName): base( bridgeID, vehicleName)
+        {
+
+        }
+
+
+  
+
         ///// <summary>
         ///  method 
         ///public double Price() .The price is fixed at 125 kr which must be returned
@@ -45,6 +53,27 @@ namespace ClassLibraryTicketSystem
         public override string VehicleType()
         {
             return "MC";
+        }
+
+
+        public override string VehicleType2(int in_bridge, string in_vehicle)
+        {
+            if (in_bridge == 1 && in_vehicle == "Car")
+            {
+                return "Car";
+            }
+            else if (in_bridge == 1 && in_vehicle == "MC")
+            {
+                return "MC";
+            }
+            else if (in_bridge == 2 && in_vehicle == "Car")
+            {
+                return "Oresund Car";
+            }
+            else if (in_bridge == 2 && in_vehicle == "MC")
+                return "Oresund MC";
+            else
+                return "Another bridge";
         }
     }
 }

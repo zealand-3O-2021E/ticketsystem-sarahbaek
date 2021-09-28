@@ -41,11 +41,11 @@ namespace OresundBronTicketLibrary
             {
                 double discountedPrice = (price - 249);
               
-                return discountedPrice;
+                return discountedPrice;//161
             }
             else
             {
-                return price;
+                return price; //410
             }
 
         }
@@ -61,7 +61,7 @@ namespace OresundBronTicketLibrary
                 return priceAfterDiscount;
             }
             else
-                return price;
+                return price; //210
         }
 
         public double EverydayPrice_Car()
@@ -78,28 +78,28 @@ namespace OresundBronTicketLibrary
         }
 
 
-        public string VehicleType_Car(string car)
+        public string VehicleType_Car(string in_car)
         {
             return "Oresund Car";
         }
 
-        public string VehicleType_MC(string mc)
+        public string VehicleType_MC(string in_mc)
         {
             return "Oresund MC";
         }
 
  
-            public double WeekendBroBizzCustomersPrice_Car(int dayOfTheWeek, string vehicleType, bool brobizz)
+            public double WeekendBroBizzCustomersPrice_Car(int in_dayOfTheWeek, string in_vehicleType, bool in_broBizz)
             {
-            if ((broBizz) && (vehicleType == "Car"))
+            if ((in_broBizz) && (in_vehicleType == "Car") && (in_dayOfTheWeek == 6 || in_dayOfTheWeek == 7))
             {
                 return 161; //Car with brobIzz 
             }
-            else if ((!broBizz) && (vehicleType == "Car"))
+            else if ((!in_broBizz) && (in_vehicleType == "Car") && (in_dayOfTheWeek == 6 || in_dayOfTheWeek == 7))
             {
                 return 410; //Car with no Brobizz
             }
-            else if ((broBizz) && (vehicleType == "MC"))
+            else if ((in_broBizz) && (in_vehicleType == "MC") && (in_dayOfTheWeek == 6 || in_dayOfTheWeek == 7))
             {
                 return 73;//MC with Brobizz
             }
@@ -109,23 +109,27 @@ namespace OresundBronTicketLibrary
             
             }
 
-        public double Weekend_No_BroBizzPrice_Car(int dayOfWeek, string vehicleType, bool brobizz) 
+        public double Weekend_No_BroBizzPrice_Car(int in_dayOfTheWeek, string in_vehicleType, bool in_broBizz)
         {
-            if ((broBizz) && (vehicleType == "Car"))
+            if ((in_broBizz) && (in_vehicleType == "Car") && (in_dayOfTheWeek == 6 || in_dayOfTheWeek == 7))
             {
                 return 161; //Car with brobIzz 
             }
-            else if ((!broBizz) && (vehicleType == "Car"))
+            else if ((!in_broBizz) && (in_vehicleType == "Car") && (in_dayOfTheWeek == 6 || in_dayOfTheWeek == 7))
             {
                 return 410; //Car with no Brobizz
             }
-            else if ((broBizz) && (vehicleType == "MC"))
+            else if ((in_broBizz) && (in_vehicleType != "Car") && (in_dayOfTheWeek != 6 || in_dayOfTheWeek != 7))
             {
                 return 73;//MC with Brobizz
             }
-            else
+            else if ((!in_broBizz) && (in_vehicleType != "Car") && (in_dayOfTheWeek != 6 || in_dayOfTheWeek != 7))
 
                 return 210; //MC with no Brobizz
+            else
+            {
+                return 410;
+            }
         }
     }
 

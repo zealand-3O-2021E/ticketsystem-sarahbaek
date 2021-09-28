@@ -1,5 +1,6 @@
 ﻿using ClassLibraryTicketSystem;
 
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -97,13 +98,13 @@ namespace StoreBaeltTicketLibrary
             return price;
         }
 
-        public string VehicleType_Car(string car)
+        public string VehicleType_Car(string in_car)
         {
-
+            
             return "Car";
         }
 
-        public string VehicleType_MC(string mc)
+        public string VehicleType_MC(string in_mc)
         {
 
             return "MC";

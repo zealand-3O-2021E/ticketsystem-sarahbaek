@@ -4,5 +4,10 @@
         <name>StoreBaeltTicketLibraryTests</name>
     </assembly>
     <members>
+        <member name="M:StoreBaeltTicketLibrary.Tests.StoreBridgeClassTests.Weekend_No_BroBizzPrice_CarTest">
+            <summary>
+            There are error in this method.
+            </summary>
+        </member>
     </members>
 </doc>

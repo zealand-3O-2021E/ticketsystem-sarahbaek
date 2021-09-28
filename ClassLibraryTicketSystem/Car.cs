@@ -46,5 +46,11 @@ namespace ClassLibraryTicketSystem
 
         }
 
+        public Car(int bridgeID, string vehicleName) : base(bridgeID, vehicleName)
+        {
+
+        }
+
+
     }
 }
