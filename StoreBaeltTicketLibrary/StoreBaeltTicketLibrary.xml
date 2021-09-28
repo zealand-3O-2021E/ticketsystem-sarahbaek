@@ -4,6 +4,11 @@
         <name>StoreBaeltTicketLibrary</name>
     </assembly>
     <members>
+        <member name="P:StoreBaeltTicketLibrary.StoreBridgeClass.BridgeID">
+            <summary>
+            Properties
+            </summary>
+        </member>
         <member name="M:StoreBaeltTicketLibrary.StoreBridgeClass.BrobizzCustomersDiscount_Car(System.Boolean)">
             <summary>
             Method calculates the car price of the brige when a brobizz discount is deduted
@@ -28,6 +33,24 @@
             <summary>
             Method calculated the brige price for a MC that does not have a brobizz
             </summary>
+            <returns></returns>
+        </member>
+        <member name="M:StoreBaeltTicketLibrary.StoreBridgeClass.WeekendBroBizzCustomersPrice_Car(System.Int32,System.String,System.Boolean)">
+            <summary>
+            This method Calculates the weekend price discount on cars 
+            </summary>
+            <param name="in_dayOfTheWeek"></param>
+            <param name="in_vehicleType"></param>
+            <param name="in_broBizz"></param>
+            <returns></returns>
+        </member>
+        <member name="M:StoreBaeltTicketLibrary.StoreBridgeClass.Weekend_No_BroBizzPrice_Car(System.Int32,System.String,System.Boolean)">
+            <summary>
+            This method claculates the weekend price for a vehicle without a brobizz passing through the StoreBridge
+            </summary>
+            <param name="dayOfTheWeek"></param>
+            <param name="vehicleType"></param>
+            <param name="brobizz"></param>
             <returns></returns>
         </member>
     </members>

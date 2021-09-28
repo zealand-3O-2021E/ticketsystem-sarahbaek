@@ -6,7 +6,57 @@
     <members>
         <member name="M:ClassLibraryTicketSystem.Tests.CarTests.PriceTest_CorrectPrice_Pass">
             <summary>
-            Testing the Price method. It should retun a double 240.00.
+            Testing the bridge price of a car without a brobizz. It should return a double 240.00.
+            </summary>
+        </member>
+        <member name="M:ClassLibraryTicketSystem.Tests.CarTests.VehicleTypeTest">
+            <summary>
+            Tests the type of vehicle, returns a car
+            </summary>
+        </member>
+        <member name="M:ClassLibraryTicketSystem.Tests.CarTests.PriceTest_CorrectPrice_Pass_Testing_Brobizz">
+            <summary>
+            //Tests the discount given to a car that has a brobizz, returns the discounted price
+            </summary>
+        </member>
+        <member name="M:ClassLibraryTicketSystem.Tests.MCTests.PriceTest_MCRice_Passing">
+            <summary>
+            Testing the price of a MC crossing the bridge , without a brobizz.
+            </summary>
+        </member>
+        <member name="M:ClassLibraryTicketSystem.Tests.MCTests.VehicleTest_withoutBroBizz">
+            <summary>
+            Checking the price a MC that has no brobizz, pays, while crossing the StoreBelt bridge
+            </summary>
+        </member>
+        <member name="M:ClassLibraryTicketSystem.Tests.MCTests.PriceTest_CorrectPrice_Pass_Testing_MC_Brobizz">
+            <summary>
+            Testing the price of an MC that has a brobizz, it gets a discount of 5%
+            </summary>
+        </member>
+        <member name="M:ClassLibraryTicketSystem.Tests.MotorCycleTests.VehicleType2Test_StoreBeltMC">
+            <summary>
+            Checking the vehicle types crossing the StoreBeelt Bridge- motocylces
+            </summary>
+        </member>
+        <member name="M:ClassLibraryTicketSystem.Tests.MotorCycleTests.VehicleType2Test_OresundMC">
+            <summary>
+            Checking the vehicle type crossing the Oresund bridge is a MC.
+            </summary>
+        </member>
+        <member name="M:ClassLibraryTicketSystem.Tests.VehicleTests.VehicleTest_LicensePlate_ThrowsAnException">
+            <summary>
+            Testing the length of the licence plate. It should not be longer than 7 characters and an exception should be thrown if it exceeds the limit.
+            </summary>
+        </member>
+        <member name="M:ClassLibraryTicketSystem.Tests.VehicleTests.VehicleType2Test_StoreBeltCar">
+            <summary>
+            Checking the type of vehicle crossing the StoreBridge- car
+            </summary>
+        </member>
+        <member name="M:ClassLibraryTicketSystem.Tests.VehicleTests.VehicleType2Test_OresundCar">
+            <summary>
+            Checking the vehicle type of vehicles  crossing the Oresund Bridge
             </summary>
         </member>
     </members>

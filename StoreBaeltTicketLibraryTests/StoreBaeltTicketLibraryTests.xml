@@ -4,9 +4,66 @@
         <name>StoreBaeltTicketLibraryTests</name>
     </assembly>
     <members>
-        <member name="M:StoreBaeltTicketLibrary.Tests.StoreBridgeClassTests.Weekend_No_BroBizzPrice_CarTest">
+        <member name="M:StoreBaeltTicketLibrary.Tests.StoreBridgeClassTests.StoreBridgeClassTest">
             <summary>
-            There are error in this method.
+            Testing the constructor
+            </summary>
+        </member>
+        <member name="M:StoreBaeltTicketLibrary.Tests.StoreBridgeClassTests.BrobizzCustomersDiscount_CarTest">
+            <summary>
+            Testing the price a car that has a brobizz pays - the car gets a brobizz discount of 5% and pays 228kr.
+            </summary>
+        </member>
+        <member name="M:StoreBaeltTicketLibrary.Tests.StoreBridgeClassTests.BrobizzCustomersDiscount_CarTest_NoBBZ">
+            <summary>
+            Testing the price a car that has no brobizz pays - the car does NOT get a brobizz discount. A full price of 240kr is paid.
+            </summary>
+        </member>
+        <member name="M:StoreBaeltTicketLibrary.Tests.StoreBridgeClassTests.BrobizzCustomersDiscount_MCTest">
+            <summary>
+            A motorbike with a brobizz gets a 5% discount on the bridge and pays 118.75kr.
+            </summary>
+        </member>
+        <member name="M:StoreBaeltTicketLibrary.Tests.StoreBridgeClassTests.BrobizzCustomersDiscount_MCTest_NoBBZ">
+            <summary>
+             A motorbike WITHOUT a brobizz does NOT get  5% discount on the bridge and pays 125kr.
+            </summary>
+        </member>
+        <member name="M:StoreBaeltTicketLibrary.Tests.StoreBridgeClassTests.WeekendBroBizzCustomersPrice_CarTest">
+            <summary>
+            A car witha brobizz crossing the bridge on a Saturday gets both discounts. Thus the price paid by the car after the discounts is 182.4kr.
+            </summary>
+        </member>
+        <member name="M:StoreBaeltTicketLibrary.Tests.StoreBridgeClassTests.WeekendBroBizzCustomersPrice_CarTest1_Sunday_BBZ">
+            <summary>
+            A car without brobizz crossing the bridge on a Sunday gets the weekend discount only discounts. Thus the price paid by the car after the discounts is 192kr.
+            </summary>
+        </member>
+        <member name="M:StoreBaeltTicketLibrary.Tests.StoreBridgeClassTests.WeekendBroBizzCustomersPrice_CarTest1_Sunday_MC">
+            <summary>
+            A motorbike with a Brobizz  crossing the bridge on a weekend receives no  weekend discount and has
+            but recieves the 5% discount for the Brobizz. The pice is therfore 118.75kr.
+            </summary>
+        </member>
+        <member name="M:StoreBaeltTicketLibrary.Tests.StoreBridgeClassTests.WeekendBroBizzCustomersPrice_CarTest1_Sunday_MC_NoBBZ">
+            <summary>
+            A mototbike without a Brobizz  crossing the bridge on a weekend recives no discount and has
+            pay the fuull price 210kr.
+            </summary>
+        </member>
+        <member name="M:StoreBaeltTicketLibrary.Tests.StoreBridgeClassTests.WeekendBroBizzCustomersPrice_CarTest1_Sunday_NoBBZ">
+            <summary>
+            Testing cars that cross the bridh´ge on a sunday without a brobizz
+            </summary>
+        </member>
+        <member name="M:StoreBaeltTicketLibrary.Tests.StoreBridgeClassTests.VehicleType_CarTest_PassingTest">
+             <summary>
+            Chets the type of vehilce that iit is a car 
+             </summary>
+        </member>
+        <member name="M:StoreBaeltTicketLibrary.Tests.StoreBridgeClassTests.VehicleType_MCTest_Passing">
+            <summary>
+            Checking that the vehicle is a motor cycle
             </summary>
         </member>
     </members>

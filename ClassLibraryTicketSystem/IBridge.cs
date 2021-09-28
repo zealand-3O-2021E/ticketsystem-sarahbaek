@@ -6,8 +6,15 @@ using System.Threading.Tasks;
 
 namespace ClassLibraryTicketSystem
 {
-   public interface IBridge
+    #region
+    #endregion
+    public interface IBridge
     {
+        #region Interface Methods
+        /// <summary>
+        /// Interface methods that must be implemented by the 2 bridges
+        /// </summary>
+        /// <returns></returns>
         double EverydayPrice_Car();
         double EverydayPrice_MC();
 
@@ -15,10 +22,8 @@ namespace ClassLibraryTicketSystem
         double BrobizzCustomersDiscount_MC(bool broBizz);
 
         double WeekendBroBizzCustomersPrice_Car(int dayOfTheWeek, string vehicleType, bool brobizz);
-        public double Weekend_No_BroBizzPrice_Car(int dayOfTheWeek, string vehicleType, bool brobizz); 
-
-        public string VehicleType_Car(string car);
-        public string VehicleType_MC(string mc);
+        public double Weekend_No_BroBizzPrice_Car(int dayOfTheWeek, string vehicleType, bool brobizz);
+        #endregion
     }
 }
 

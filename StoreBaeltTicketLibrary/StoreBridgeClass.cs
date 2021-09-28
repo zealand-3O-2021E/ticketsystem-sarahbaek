@@ -11,31 +11,36 @@ namespace StoreBaeltTicketLibrary
 {
 
     public   class StoreBridgeClass :IBridge
-
     {
-
+        #region Properties
+        /// <summary>
+        /// Properties
+        /// </summary>
         public int BridgeID { get; set; }
 
         public string BridgeName { get; set; }
+        #endregion
 
+        #region Constructor
         public StoreBridgeClass(int bridgeID, string bridgeName)
 
         {
             BridgeID = bridgeID;
             BridgeName = bridgeName;
         }
+        #endregion
 
-        private bool BroBizz;
+        #region Method: BrobizzCustomersDiscount_Car
         /// <summary>
         /// Method calculates the car price of the brige when a brobizz discount is deduted
         /// </summary>
         /// <param name="broBizz"></param>
         /// <returns>price</returns>
-        public double BrobizzCustomersDiscount_Car(bool broBizz)
+        public double BrobizzCustomersDiscount_Car(bool in_broBizz)
         {
             double price = 240;
 
-            if (BroBizz)
+            if (in_broBizz)
             {
                 double discount = (price * 0.05);
                 price = price - discount;
@@ -47,17 +52,19 @@ namespace StoreBaeltTicketLibrary
             }
         }
 
+        #endregion
 
+        #region Method: BrobizzCustomersDiscount_MC
         /// <summary>
         /// // Method calculates the MC price of the brige when a brobizz discount is deduted
         /// </summary>
         /// <param name="broBizz"></param>
         /// <returns>price</returns>
-        public double BrobizzCustomersDiscount_MC(bool broBizz)
+        public double BrobizzCustomersDiscount_MC(bool in_broBizz)
         {
             double price = 125;
 
-            if (BroBizz)
+            if (in_broBizz)
             {
                 double discount = (price * 0.05);
                 price = price - discount;
@@ -68,10 +75,9 @@ namespace StoreBaeltTicketLibrary
                 return price;
             }
         }
+        #endregion
 
-
-
-
+        #region Method: EverydayPrice_Car
         /// <summary>
         /// Method calculated the brige price for a car that does not have a brobizz
         /// </summary>
@@ -83,9 +89,9 @@ namespace StoreBaeltTicketLibrary
             price = price - discount;
             return price;
         }
+        #endregion
 
-
-
+        #region Method: EverydayPrice_MC
         /// <summary>
         /// Method calculated the brige price for a MC that does not have a brobizz
         /// </summary>
@@ -97,21 +103,17 @@ namespace StoreBaeltTicketLibrary
             price = price - discount;
             return price;
         }
+        #endregion
 
-        public string VehicleType_Car(string in_car)
-        {
-            
-            return "Car";
-        }
-
-        public string VehicleType_MC(string in_mc)
-        {
-
-            return "MC";
-        }
-
-        public double WeekendBroBizzCustomersPrice_Car( int dayOfTheWeek,   string vehicleType, bool brobizz)
-
+        #region Method: WeekendBroBizzCustomersPrice_Car
+        /// <summary>
+        /// This method Calculates the weekend price discount on cars 
+        /// </summary>
+        /// <param name="in_dayOfTheWeek"></param>
+        /// <param name="in_vehicleType"></param>
+        /// <param name="in_broBizz"></param>
+        /// <returns></returns>
+        public double WeekendBroBizzCustomersPrice_Car(int in_dayOfTheWeek, string in_vehicleType, bool in_broBizz)
         {
             //Deduct the weekend discount, then deduct the normal discount
             double price = 240;
@@ -119,11 +121,8 @@ namespace StoreBaeltTicketLibrary
             int currentDayOfWeek = 0;
             currentDayOfWeek = (int)System.DayOfWeek.Monday;
 
-            object dayToday = null;
-
-            if ((currentDayOfWeek == 6 || currentDayOfWeek == 7) && (vehicleType == "Car") && (brobizz == true))
-                //if ((currentDayOfWeek == 6 || currentDayOfWeek == 7) && (Vehicle().()"Car") && (brobizz == true))
-                {
+            if ((in_broBizz) && (in_vehicleType == "Car") && (in_dayOfTheWeek == 6 || in_dayOfTheWeek == 7))
+            {
                 //Calculating the weekend discount thats 20% of 240.
                 double weekendPrice20Discount = price * 0.20;
                 //Deducting the discount from the original price  240- (0.20 * 240)= 192
@@ -133,17 +132,40 @@ namespace StoreBaeltTicketLibrary
                 //Calculating the final price which is the weekendPrice  - brobiss discount i.e (192-9.6)= 182.4
                 double FinalWeekendPrice = weekendPriceMinus20Discount - weekendDisccountBroBizzWeekend;
 
-                return FinalWeekendPrice;
-            } else
+                return FinalWeekendPrice;      //Car with brobIzz
 
-               return weekendPriceMinus20PctDiscount;
+            }
+            else if ((!in_broBizz) && (in_vehicleType == "Car") && (in_dayOfTheWeek == 6 || in_dayOfTheWeek == 7))
+            {
+                return weekendPriceMinus20PctDiscount; //192
+            }
+            else if ((in_broBizz) && (in_vehicleType == "MC") && (in_dayOfTheWeek == 6 || in_dayOfTheWeek == 7))
+            {
+                double mCPrice = 125;
+                double brobizzMc = (125 * 0.05); //6.25
+                double broBizzMcPrice = (mCPrice - brobizzMc); //118.75
+
+                return broBizzMcPrice;//MC with Brobizz
+            }
+            else
+
+                return 210; //MC with no Brobizz
+
         }
+        #endregion
 
-
+        #region Method:  Weekend_No_BroBizzPrice_Car
+        /// <summary>
+        /// This method claculates the weekend price for a vehicle without a brobizz passing through the StoreBridge
+        /// </summary>
+        /// <param name="dayOfTheWeek"></param>
+        /// <param name="vehicleType"></param>
+        /// <param name="brobizz"></param>
+        /// <returns></returns>
         public double Weekend_No_BroBizzPrice_Car(int dayOfTheWeek, string vehicleType, bool brobizz)
         {
             double price = 240;
-            double weekendPrice20Discount = price * 0.20 ;//48
+            double weekendPrice20Discount = price * 0.20;//48
             double weekendPriceMinus20Discount = price - weekendPrice20Discount;//192
             double weekendDisccountBroBizzWeekend = 0.05 * weekendPriceMinus20Discount;//9.6
             double FinalWeekendPrice = weekendPriceMinus20Discount - weekendDisccountBroBizzWeekend;//192-9.6 = 182.4
@@ -174,6 +196,8 @@ namespace StoreBaeltTicketLibrary
                 return 125; //MotorBike 
 
         }
+
+        #endregion
 
     }
 }

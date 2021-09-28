@@ -33,6 +33,32 @@
             <param name="broBizz"></param>
             <param name="bridgeName"></param>
         </member>
+        <member name="M:ClassLibraryTicketSystem.IBridge.EverydayPrice_Car">
+            <summary>
+            Interface methods that must be implemented by the 2 bridges
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:ClassLibraryTicketSystem.MotorCycle">
+            <summary>
+            The motor cycle class inherits from the vehicle class
+            </summary>
+        </member>
+        <member name="M:ClassLibraryTicketSystem.MotorCycle.#ctor(System.String,System.DateTime,System.Boolean)">
+            <summary>
+            A constructor that takes 3 parameters
+            </summary>
+            <param name="licencePlate"></param>
+            <param name="date"></param>
+            <param name="broBizz"></param>
+        </member>
+        <member name="M:ClassLibraryTicketSystem.MotorCycle.#ctor(System.Int32,System.String)">
+            <summary>
+            A constructor that takes 2 parameters
+            </summary>
+            <param name="bridgeID"></param>
+            <param name="vehicleName"></param>
+        </member>
         <!-- Badly formed XML comment ignored for member "M:ClassLibraryTicketSystem.MotorCycle.Price" -->
         <member name="M:ClassLibraryTicketSystem.MotorCycle.VehicleType">
             <summary>
@@ -41,9 +67,17 @@
             </summary>
             <returns>"MC"</returns>
         </member>
+        <member name="M:ClassLibraryTicketSystem.MotorCycle.VehicleType2(System.Int32,System.String)">
+            <summary>
+            A method that checks the the bdige and vehicle and then returns the bridge and car type
+            </summary>
+            <param name="in_bridge"></param>
+            <param name="in_vehicle"></param>
+            <returns></returns>
+        </member>
         <member name="T:ClassLibraryTicketSystem.Vehicle">
             <summary>
-            A Vehicle abstract class that has methods that can be inherited and overriden by child classes
+            A Vehicle abstract class that has methods that can be inherited and overriden by child classes - catr class and MC class
             </summary>
         </member>
         <member name="F:ClassLibraryTicketSystem.Vehicle._broBizz">
@@ -104,6 +138,14 @@
             public string VehicleType() which returns the string "Car" 
             </summary>
             <returns>"Car"</returns>
+        </member>
+        <member name="M:ClassLibraryTicketSystem.Vehicle.VehicleType2(System.Int32,System.String)">
+            <summary>
+            Checks the vehicle type crossing each bridge and returns the vehicle type , and in the oresund bridge retuns the bridge name plus the vehicle type
+            </summary>
+            <param name="in_bridge"></param>
+            <param name="in_vehicle"></param>
+            <returns></returns>
         </member>
     </members>
 </doc>

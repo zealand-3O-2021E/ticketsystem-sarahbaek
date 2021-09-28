@@ -4,5 +4,61 @@
         <name>OresundBronTicketLibrary</name>
     </assembly>
     <members>
+        <member name="M:OresundBronTicketLibrary.OresundBridgeClass.#ctor(System.Int32,System.String)">
+            <summary>
+            Constructor taking 2 parameters
+            </summary>
+            <param name="bridgeID"></param>
+            <param name="bridgeName"></param>
+        </member>
+        <member name="P:OresundBronTicketLibrary.OresundBridgeClass.BridgeID">
+            <summary>
+            Properties needed to intialize a bridge
+            </summary>
+        </member>
+        <member name="M:OresundBronTicketLibrary.OresundBridgeClass.BrobizzCustomersDiscount_Car(System.Boolean)">
+            <summary>
+            We check that a car that has a brobizz gets a discount and only pays 161kr
+            </summary>
+            <param name="broBizz"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OresundBronTicketLibrary.OresundBridgeClass.BrobizzCustomersDiscount_MC(System.Boolean)">
+            <summary>
+            ´This method fives a discount to a MC that has a brobizz
+            </summary>
+            <param name="broBizz"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OresundBronTicketLibrary.OresundBridgeClass.EverydayPrice_Car">
+            <summary>
+            This method shows the price of a car crossing the bridge without a brobizz
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:OresundBronTicketLibrary.OresundBridgeClass.EverydayPrice_MC">
+            <summary>
+            This method shows the price of a MC without a brobizz, crossing the Oresund Bridge
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:OresundBronTicketLibrary.OresundBridgeClass.WeekendBroBizzCustomersPrice_Car(System.Int32,System.String,System.Boolean)">
+            <summary>
+            Method that calculates the weekend discount for cars crossing the bridge, with and without a brobizz
+            </summary>
+            <param name="in_dayOfTheWeek"></param>
+            <param name="in_vehicleType"></param>
+            <param name="in_broBizz"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OresundBronTicketLibrary.OresundBridgeClass.Weekend_No_BroBizzPrice_Car(System.Int32,System.String,System.Boolean)">
+            <summary>
+            This method calculates the price of a car without a brobizz crossing the bridge on a weekend
+            </summary>
+            <param name="in_dayOfTheWeek"></param>
+            <param name="in_vehicleType"></param>
+            <param name="in_broBizz"></param>
+            <returns></returns>
+        </member>
     </members>
 </doc>

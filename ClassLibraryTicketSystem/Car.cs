@@ -4,6 +4,7 @@ namespace ClassLibraryTicketSystem
 {
     public class Car : Vehicle
     {
+        #region Constructors
         /// <summary>
         /// Empty Constructor
         /// </summary>
@@ -51,6 +52,7 @@ namespace ClassLibraryTicketSystem
 
         }
 
+        #endregion
 
     }
 }
