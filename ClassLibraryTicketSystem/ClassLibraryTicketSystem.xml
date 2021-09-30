@@ -24,15 +24,6 @@
             <param name="date"></param>
             <param name="broBizz"></param>
         </member>
-        <member name="M:ClassLibraryTicketSystem.Car.#ctor(System.String,System.DateTime,System.Boolean,System.String)">
-            <summary>
-            Overloaded Constructor with 4 parameters
-            </summary>
-            <param name="licencePlate"></param>
-            <param name="date"></param>
-            <param name="broBizz"></param>
-            <param name="bridgeName"></param>
-        </member>
         <member name="M:ClassLibraryTicketSystem.IBridge.EverydayPrice_Car">
             <summary>
             Interface methods that must be implemented by the 2 bridges

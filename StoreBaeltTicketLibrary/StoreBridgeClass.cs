@@ -121,7 +121,7 @@ namespace StoreBaeltTicketLibrary
             int currentDayOfWeek = 0;
             currentDayOfWeek = (int)System.DayOfWeek.Monday;
 
-            if ((in_broBizz) && (in_vehicleType == "Car") && (in_dayOfTheWeek == 6 || in_dayOfTheWeek == 7))
+            if ((in_broBizz) && (in_vehicleType == "Car") && in_dayOfTheWeek is 6 or 7)
             {
                 //Calculating the weekend discount thats 20% of 240.
                 double weekendPrice20Discount = price * 0.20;

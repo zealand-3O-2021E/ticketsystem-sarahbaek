@@ -20,12 +20,12 @@ namespace ClassLibraryTicketSystem.Tests
         /// </summary>
         [TestMethod()]
         //[DataTestMethod]
-        [DataRow("ASDFGHJ", 26 - 04 - 2021)]
-        [DataRow("ASDFGHJKASED", 26 - 04 - 2021)]
-        [ExpectedException(typeof(System.Reflection.TargetParameterCountException))]
+        //[DataRow("ASDFGHJ", DateTime.Parse("26 - 04 - 2021"))]
+        //[DataRow("ASDFGHJKASED", 26 - 04 - 2021)]
+        [ExpectedException(typeof(ArgumentOutOfRangeException))]
         public void VehicleTest_LicensePlate_ThrowsAnException()
         {
-            Assert.Fail();
+            _ = new Car("ABCEDFGH", DateTime.Now);
         }
         #endregion
 
