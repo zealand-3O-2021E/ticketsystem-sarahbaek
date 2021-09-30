@@ -57,8 +57,8 @@ namespace ClassLibraryTicketSystem
             LicensePlate = licensePlate;
             if (licensePlate.Length > 7)
             {
-                //throw new ArgumentOutOfRangeException("The licenceplate should not be more than 7 characters.");
-                throw new System.Reflection.TargetParameterCountException("Are there 7 characters?");
+                throw new ArgumentOutOfRangeException("The licenceplate should not be more than 7 characters.");
+                //throw new System.Reflection.TargetParameterCountException("Are there 7 characters?");
             }
             Date = date;
         }
@@ -89,8 +89,8 @@ namespace ClassLibraryTicketSystem
             LicensePlate = licensePlate;
             if (licensePlate.Length > 7)
             {
-                //throw new ArgumentOutOfRangeException("The licenceplate should not be more than 7 characters.");
-                throw new System.Reflection.TargetParameterCountException("Are there 7 characters?");
+                throw new ArgumentOutOfRangeException("The licenceplate should not be more than 7 characters.");
+                //throw new System.Reflection.TargetParameterCountException("Are there 7 characters?");
             }
             Date = date;
             BridgeName = bridgeName;

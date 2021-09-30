@@ -34,23 +34,6 @@ namespace ClassLibraryTicketSystem
 
         }
 
-        /// <summary>
-        /// Overloaded Constructor with 4 parameters
-        /// </summary>
-        /// <param name="licencePlate"></param>
-        /// <param name="date"></param>
-        /// <param name="broBizz"></param>
-        /// <param name="bridgeName"></param>
-        public Car(string licencePlate, DateTime date, bool broBizz, string bridgeName)
-          : base(licencePlate, date, broBizz, bridgeName)
-        {
-
-        }
-
-        public Car(int bridgeID, string vehicleName) : base(bridgeID, vehicleName)
-        {
-
-        }
 
         #endregion
 
